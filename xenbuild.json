@@ -1,0 +1,9 @@
+{
+        "id": "robboDonationManagerSidebar",
+        "name": "Donation Manager Sidebar",
+        "version": "Build: {revision}",
+        "url": "",
+
+        "installer": "Robbo\\DontationManagerSidebar\\Installer",
+        "composer": true
+}
