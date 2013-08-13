@@ -10,5 +10,7 @@ class Listener {
     public static function widgetFrameworkReady(&$renderers)
     {
         $renderers[] = 'Robbo\DonationManagerSidebar\WidgetFramework\Goal';
+        $renderers[] = 'Robbo\DonationManagerSidebar\WidgetFramework\TopDonors';
+        $renderers[] = 'Robbo\DonationManagerSidebar\WidgetFramework\TopDonations';
     }
 }

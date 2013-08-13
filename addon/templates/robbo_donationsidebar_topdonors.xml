@@ -1,0 +1,7 @@
+<template title="robbo_donationsidebar_topdonors" version_id="3" version_string="Build: 3"><![CDATA[<div class="avatarHeap topDonors">
+	<ol>
+		<xen:foreach loop="$topDonors" value="$donation">
+			<li><xen:avatar user="$donation" size="s" class="Tooltip" title="{$donation.username}. {xen:phrase merc_total_donated}: {xen:helper amount, $donation.amount}" /></li>
+		</xen:foreach>
+	</ol>
+</div>]]></template>
