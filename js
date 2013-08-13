@@ -1,1 +1,0 @@
-../xenforo/js

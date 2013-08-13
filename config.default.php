@@ -13,4 +13,4 @@ $config['internalDataPath'] = __DIR__.'/internal_data';
 
 $config['debug'] = true;
 
-$config['development']['default_addon'] = 'robboDonationManagerSidebar';
+$config['development']['default_addon'] = 'robboDonationSidebar';

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+
+<addon addon_id="robboDonationManagerSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+
+<addon addon_id="robboDonationManagerSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="Robbo\DontationManagerSidebar\Installer" install_callback_method="install" uninstall_callback_class="Robbo\DontationManagerSidebar\Installer" uninstall_callback_method="uninstall">
+
+<admin_navigation/>
+
+<code_event_listeners/>
+
+<code_events/>
+
+<cron/>
+
+<email_templates/>
+
+<optiongroups/>
+
+<permissions>
+  <permission_groups/>
+  <permissions/>
+  <interface_groups/>
+</permissions>
+
+<phrases/>
+
+<route_prefixes/>
+
+<templates>
+</templates>
+<admin_templates>
+</admin_templates>
+
+</addon>
+<admin_navigation/>
+
+<code_event_listeners/>
+
+<code_events/>
+
+<cron/>
+
+<email_templates/>
+
+<optiongroups/>
+
+<permissions>
+  <permission_groups/>
+  <permissions/>
+  <interface_groups/>
+</permissions>
+
+<phrases/>
+
+<route_prefixes/>
+
+<templates>
+</templates>
+<admin_templates>
+</admin_templates>
+
+</addon>
+<admin_navigation/>
+
+<code_event_listeners/>
+
+<code_events/>
+
+<cron/>
+
+<email_templates/>
+
+<optiongroups/>
+
+<permissions>
+  <permission_groups/>
+  <permissions/>
+  <interface_groups/>
+</permissions>
+
+<phrases/>
+
+<route_prefixes/>
+
+<templates>
+</templates>
+<admin_templates>
+</admin_templates>
+
+</addon>

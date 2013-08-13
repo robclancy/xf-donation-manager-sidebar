@@ -1,0 +1,62 @@
+<template title="robbo_donationsidebar_goal" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require js="js/merc/donation_manager.js" />
+
+<div class="section donationSidebar">
+	<xen:if is="{xen:count $goals} == 1">
+	        <xen:foreach loop="$goals" value="$goal">
+	        <div class="goal solo">
+	            <ul class="goalInfo">
+	                <li>
+	                    <div>{xen:helper amount, $goal.donated}
+	                        <span>{xen:phrase raised_so_far}</span>
+	                    </div>
+	                </li>
+	                <li>
+	                    <div>{xen:helper amount, {$goal.goal}}
+	                        <span{xen:if {$goal.end_date}, ' title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}"'}>{xen:phrase goal}{xen:if {$goal.end_date}, ' ({xen:helper goaltimeleft, {$goal.end_date}})'}</span>
+	                    </div>
+	                </li>
+	            </ul>                   
+	            <div class="progressBar">
+	                <span class="progressText">{xen:number {$goal.percentComplete}}%</span>
+	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
+	            </div>
+	            <xen:if is="{$xenOptions.acceptingDonations}">
+	                <label class="donateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	            <xen:else />
+	                <div class="donationsOff">
+	                    <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
+	                </div>
+	            </xen:if>
+	            <div class="goalDetailsLink"><a href="{xen:link goals, $goal}" class="Tooltip" title="{$goal.title}">{xen:phrase view_goal_details}</a></div>
+	        </div>
+	    </xen:foreach>
+	</xen:if>
+	<xen:if is="{xen:count $goals} > 1">
+	    <xen:foreach loop="$goals" value="$goal">
+	        <div class="goal">
+	            <h4 class="goalTitle"><a href="{xen:link goals, $goal}" class="Tooltip" title="{xen:phrase view_goal_details}...">{$goal.title}</a></h4>
+	            <div class="progressBar">
+	                <span class="progressText">{xen:helper amount, {$goal.donated}} / {xen:helper amount, {$goal.goal}}</span>
+	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
+	            </div>
+	            <div class="goalFooter">
+	                <xen:if is="{$xenOptions.acceptingDonations}">
+	                    <div class="daysLeft" title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}">{xen:helper goaltimeleft, {$goal.end_date}}</div>
+	                    <label class="smallDonateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	                <xen:else />
+	                    <div class="donationsOff">
+	                        <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
+	                    </div>
+	                </xen:if>
+	            </div>
+	        </div>
+	    </xen:foreach>
+	</xen:if>
+	
+	<xen:if is="{$xenOptions.donationSectionEnabled.donationList}">
+	    <div class="sectionFooter">
+	        <a href="{xen:link donations}">{xen:phrase merc_view_donations}</a>
+	    </div>
+	</xen:if>
+</div>]]></template>
