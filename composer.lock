@@ -159,12 +159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/raveren/kint.git",
-                "reference": "v0.9"
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raveren/kint/zipball/v0.9",
-                "reference": "v0.9",
+                "url": "https://api.github.com/repos/raveren/kint/zipball/ada810111ced4e3a926b4040da9b86442e43b613",
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613",
                 "shasum": ""
             },
             "require": {
@@ -205,12 +205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robclancy/xf-sync.git",
-                "reference": "6b10f13d44f193075ff7cb963c8d9fdc06d4bf9a"
+                "reference": "9ac628859f206f603979291f9208df9ebdda95c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robclancy/xf-sync/zipball/6b10f13d44f193075ff7cb963c8d9fdc06d4bf9a",
-                "reference": "6b10f13d44f193075ff7cb963c8d9fdc06d4bf9a",
+                "url": "https://api.github.com/repos/robclancy/xf-sync/zipball/9ac628859f206f603979291f9208df9ebdda95c9",
+                "reference": "9ac628859f206f603979291f9208df9ebdda95c9",
                 "shasum": ""
             },
             "require": {
@@ -236,7 +236,7 @@
             ],
             "authors": [
                 {
-                    "name": "Robbo",
+                    "name": "Robert Clancy",
                     "email": "robert@mercenarydesign.net"
                 }
             ],
@@ -245,7 +245,7 @@
                 "development",
                 "xenforo"
             ],
-            "time": "2013-07-14 16:41:53"
+            "time": "2013-09-02 12:07:55"
         }
     ],
     "aliases": [
