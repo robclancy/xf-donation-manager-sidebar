@@ -1,0 +1,11 @@
+<template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<div class="avatarList topDonations">
+	<ul>
+		<xen:foreach loop="$topDonations" value="$donation">
+			<li>
+				<xen:avatar user="$donation" size="s" img="true" />
+				<xen:username user="$donation" />
+				<span class="muted">{xen:helper amount, $donation.amount}</span>
+			</li>
+		</xen:foreach>
+	</ul>
+</div>]]></template>

@@ -1,0 +1,265 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "99f2fb7cb7d68a9b9e29aad56bc1612c",
+    "packages": [
+        {
+            "name": "robclancy/db-connector",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robclancy/db-connector.git",
+                "reference": "10c5870fd41f24a280b0fd7ed8137de12ad9f5b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robclancy/db-connector/zipball/10c5870fd41f24a280b0fd7ed8137de12ad9f5b4",
+                "reference": "10c5870fd41f24a280b0fd7ed8137de12ad9f5b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Robbo\\DbConnector": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Robert Clancy",
+                    "email": "mail@robertclancy.net"
+                }
+            ],
+            "description": "Fork of illuminate/database to provide a simple package for database connection alone",
+            "keywords": [
+                "database",
+                "sql"
+            ],
+            "time": "2013-04-11 07:53:31"
+        },
+        {
+            "name": "robclancy/schema-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robclancy/schema-builder.git",
+                "reference": "b043dcc15e8b20d4ccfed1a6a66b0cb1e41fe818"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robclancy/schema-builder/zipball/b043dcc15e8b20d4ccfed1a6a66b0cb1e41fe818",
+                "reference": "b043dcc15e8b20d4ccfed1a6a66b0cb1e41fe818",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "robclancy/db-connector": "1.0.x"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Robbo\\SchemaBuilder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Robert Clancy",
+                    "email": "mail@robertclancy.net"
+                }
+            ],
+            "description": "Fork of illuminate/database to use the schema builder alone.",
+            "keywords": [
+                "database",
+                "schema",
+                "sql"
+            ],
+            "time": "2013-04-13 03:23:00"
+        },
+        {
+            "name": "robclancy/xf-support",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robclancy/xf-support.git",
+                "reference": "1aa4e6e560a1eb05167a196d35ed029141614774"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robclancy/xf-support/zipball/1aa4e6e560a1eb05167a196d35ed029141614774",
+                "reference": "1aa4e6e560a1eb05167a196d35ed029141614774",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "robclancy/db-connector": "1.0.*",
+                "robclancy/schema-builder": "1.0.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Robbo\\Support": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "DBAD"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Clancy",
+                    "email": "robert@mercenarydesign.net"
+                }
+            ],
+            "description": "This package is a bunch of things to remove a lot of boilerplate when working with XenForo.",
+            "keywords": [
+                "development",
+                "xenforo"
+            ],
+            "time": "2013-06-30 12:58:45"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "raveren/kint",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raveren/kint.git",
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raveren/kint/zipball/ada810111ced4e3a926b4040da9b86442e43b613",
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Kint.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rokas Šleinius",
+                    "homepage": "https://github.com/raveren"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/raveren/kint/contributors"
+                }
+            ],
+            "description": "Kint - debugging helper for PHP developers",
+            "homepage": "https://github.com/raveren/kint",
+            "keywords": [
+                "debug",
+                "kint",
+                "php"
+            ],
+            "time": "2013-08-12 22:46:16"
+        },
+        {
+            "name": "robclancy/xf-sync",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robclancy/xf-sync.git",
+                "reference": "9ac628859f206f603979291f9208df9ebdda95c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robclancy/xf-sync/zipball/9ac628859f206f603979291f9208df9ebdda95c9",
+                "reference": "9ac628859f206f603979291f9208df9ebdda95c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Robbo\\XfSync": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "DBAD"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Clancy",
+                    "email": "robert@mercenarydesign.net"
+                }
+            ],
+            "description": ".",
+            "keywords": [
+                "development",
+                "xenforo"
+            ],
+            "time": "2013-09-02 12:07:55"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "raveren/kint": 20,
+        "robclancy/xf-sync": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

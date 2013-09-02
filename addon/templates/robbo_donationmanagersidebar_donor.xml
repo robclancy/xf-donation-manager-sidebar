@@ -1,0 +1,14 @@
+<template title="robbo_donationmanagersidebar_donor" version_id="3" version_string="Build: 3"><![CDATA[<div class="section topDonors">
+	<div class="secondaryContent avatarHeap">
+		<h3>{xen:phrase merc_top_donors}</h3>
+
+		<ol>
+			<xen:foreach loop="$topDonors" value="$donation">
+				<li><xen:avatar user="$donation" size="s" class="Tooltip" title="{$donation.username}. {xen:phrase merc_total_donated}: {xen:helper amount, $donation.amount}" /></li>
+			</xen:foreach>
+		</ol>
+	</div>
+	<div class="sectionFooter">
+		<a href="{xen:link donors}">{xen:phrase view_all}</a>
+	</div>
+</div>]]></template>
