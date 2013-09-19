@@ -1,4 +1,5 @@
 <template title="robbo_donationsidebar_goal" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require css="robbo_donationsidebar_sidebars.css" />
 <xen:require js="js/merc/donation_manager.js" />
 
 <div class="section donationSidebar">
@@ -7,12 +8,12 @@
 	        <div class="goal solo">
 	            <ul class="goalInfo">
 	                <li>
-	                    <div>{xen:helper amount, $goal.donated}
+	                    <div>{xen:helper amount, $goal.donated, true}
 	                        <span>{xen:phrase raised_so_far}</span>
 	                    </div>
 	                </li>
 	                <li>
-	                    <div>{xen:helper amount, {$goal.goal}}
+	                    <div>{xen:helper amount, {$goal.goal}, true}
 	                        <span{xen:if {$goal.end_date}, ' title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}"'}>{xen:phrase goal}{xen:if {$goal.end_date}, ' ({xen:helper goaltimeleft, {$goal.end_date}})'}</span>
 	                    </div>
 	                </li>
@@ -22,7 +23,7 @@
 	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
 	            </div>
 	            <xen:if is="{$xenOptions.acceptingDonations}">
-	                <label class="donateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	                <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
 	            <xen:else />
 	                <div class="donationsOff">
 	                    <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
@@ -43,7 +44,7 @@
 	            <div class="goalFooter">
 	                <xen:if is="{$xenOptions.acceptingDonations}">
 	                    <div class="daysLeft" title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}">{xen:helper goaltimeleft, {$goal.end_date}}</div>
-	                    <label class="smallDonateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	                    <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a></label>
 	                <xen:else />
 	                    <div class="donationsOff">
 	                        <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>

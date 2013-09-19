@@ -1,0 +1,4 @@
+<template title="robbo_donationsidebar_sidebars.css" version_id="3" version_string="Build: 3"><![CDATA[.donationSidebar .goal.solo .callToAction {
+	margin-left: 67px;
+	margin-right: 67px;
+}]]></template>
