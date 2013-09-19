@@ -1,97 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="1.0 beta 1" version_id="1006" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
-
-<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
-
-<addon addon_id="robboDonationManagerSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
-
-<addon addon_id="robboDonationManagerSidebar" title="Donation Manager Sidebar" version_string="Build: 3" version_id="3" url="" install_callback_class="Robbo\DontationManagerSidebar\Installer" install_callback_method="install" uninstall_callback_class="Robbo\DontationManagerSidebar\Installer" uninstall_callback_method="uninstall">
+<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="1.0 RC 1" version_id="1011" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
 
 <admin_navigation/>
 
-<code_event_listeners/>
-
-<code_events/>
-
-<cron/>
-
-<email_templates/>
-
-<optiongroups/>
-
-<permissions>
-  <permission_groups/>
-  <permissions/>
-  <interface_groups/>
-</permissions>
-
-<phrases/>
-
-<route_prefixes/>
-
-<templates>
-</templates>
-<admin_templates>
-</admin_templates>
-
-</addon>
-<admin_navigation/>
-
-<code_event_listeners/>
-
-<code_events/>
-
-<cron/>
-
-<email_templates/>
-
-<optiongroups/>
-
-<permissions>
-  <permission_groups/>
-  <permissions/>
-  <interface_groups/>
-</permissions>
-
-<phrases/>
-
-<route_prefixes/>
-
-<templates>
-</templates>
-<admin_templates>
-</admin_templates>
-
-</addon>
-<admin_navigation/>
-
-<code_event_listeners/>
-
-<code_events/>
-
-<cron/>
-
-<email_templates/>
-
-<optiongroups/>
-
-<permissions>
-  <permission_groups/>
-  <permissions/>
-  <interface_groups/>
-</permissions>
-
-<phrases/>
-
-<route_prefixes/>
-
-<templates>
-</templates>
-<admin_templates>
-</admin_templates>
-
-</addon>
-<admin_navigation/>
+<admin_permissions/>
 
 <code_event_listeners>
   <listener event_id="init_dependencies" execute_order="9" callback_class="Robbo\DonationManagerSidebar\Listener" callback_method="initDependencies" active="1" hint="" description=""/>
@@ -145,6 +57,7 @@
 	</div>
 </div>]]></template>
 <template title="robbo_donationsidebar_goal" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require css="robbo_donationsidebar_sidebars.css" />
 <xen:require js="js/merc/donation_manager.js" />
 
 <div class="section donationSidebar">
@@ -153,12 +66,12 @@
 	        <div class="goal solo">
 	            <ul class="goalInfo">
 	                <li>
-	                    <div>{xen:helper amount, $goal.donated}
+	                    <div>{xen:helper amount, $goal.donated, true}
 	                        <span>{xen:phrase raised_so_far}</span>
 	                    </div>
 	                </li>
 	                <li>
-	                    <div>{xen:helper amount, {$goal.goal}}
+	                    <div>{xen:helper amount, {$goal.goal}, true}
 	                        <span{xen:if {$goal.end_date}, ' title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}"'}>{xen:phrase goal}{xen:if {$goal.end_date}, ' ({xen:helper goaltimeleft, {$goal.end_date}})'}</span>
 	                    </div>
 	                </li>
@@ -168,7 +81,7 @@
 	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
 	            </div>
 	            <xen:if is="{$xenOptions.acceptingDonations}">
-	                <label class="donateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	                <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
 	            <xen:else />
 	                <div class="donationsOff">
 	                    <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
@@ -189,7 +102,7 @@
 	            <div class="goalFooter">
 	                <xen:if is="{$xenOptions.acceptingDonations}">
 	                    <div class="daysLeft" title="{xen:phrase ending}: {xen:datetime {$goal.end_date}}">{xen:helper goaltimeleft, {$goal.end_date}}</div>
-	                    <label class="smallDonateButton"><a href="{xen:link goals/donate, $goal}" class="OverlayTrigger inner">{xen:phrase donate}</a></label>
+	                    <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a></label>
 	                <xen:else />
 	                    <div class="donationsOff">
 	                        <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
@@ -206,7 +119,14 @@
 	    </div>
 	</xen:if>
 </div>]]></template>
-<template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<div class="avatarList topDonations">
+<template title="robbo_donationsidebar_sidebars.css" version_id="3" version_string="Build: 3"><![CDATA[.donationSidebar .goal.solo .callToAction {
+	margin-left: 67px;
+	margin-right: 67px;
+}]]></template>
+<template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require css="robbo_donationsidebar_sidebars.css" />
+
+<div class="avatarList topDonations">
 	<ul>
 		<xen:foreach loop="$topDonations" value="$donation">
 			<li>
@@ -217,7 +137,10 @@
 		</xen:foreach>
 	</ul>
 </div>]]></template>
-<template title="robbo_donationsidebar_topdonors" version_id="3" version_string="Build: 3"><![CDATA[<div class="avatarHeap topDonors">
+<template title="robbo_donationsidebar_topdonors" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require css="robbo_donationsidebar_sidebars.css" />
+
+<div class="avatarHeap topDonors">
 	<ol>
 		<xen:foreach loop="$topDonors" value="$donation">
 			<li><xen:avatar user="$donation" size="s" class="Tooltip" title="{$donation.username}. {xen:phrase merc_total_donated}: {xen:helper amount, $donation.amount}" /></li>
