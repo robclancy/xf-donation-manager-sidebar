@@ -1,4 +1,7 @@
-<template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<div class="avatarList topDonations">
+<template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
+<xen:require css="robbo_donationsidebar_sidebars.css" />
+
+<div class="avatarList topDonations">
 	<ul>
 		<xen:foreach loop="$topDonations" value="$donation">
 			<li>
