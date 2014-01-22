@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="1.0 RC 1" version_id="1011" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="robboDonationSidebar" title="Donation Manager Sidebar" version_string="1.0.0" version_id="1113" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
 
 <admin_navigation/>
 
@@ -81,7 +81,9 @@
 	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
 	            </div>
 	            <xen:if is="{$xenOptions.acceptingDonations}">
-	                <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
+	            	<div class="sideDonateButton">
+	                	<a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
+	                </div>
 	            <xen:else />
 	                <div class="donationsOff">
 	                    <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>
@@ -119,10 +121,7 @@
 	    </div>
 	</xen:if>
 </div>]]></template>
-<template title="robbo_donationsidebar_sidebars.css" version_id="3" version_string="Build: 3"><![CDATA[.donationSidebar .goal.solo .callToAction {
-	margin-left: 67px;
-	margin-right: 67px;
-}]]></template>
+<template title="robbo_donationsidebar_sidebars.css" version_id="3" version_string="Build: 3"><![CDATA[]]></template>
 <template title="robbo_donationsidebar_topdonations" version_id="3" version_string="Build: 3"><![CDATA[<xen:require css="merc_donation_sidebar.css" />
 <xen:require css="robbo_donationsidebar_sidebars.css" />
 

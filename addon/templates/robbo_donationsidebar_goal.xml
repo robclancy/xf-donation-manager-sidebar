@@ -23,7 +23,9 @@
 	                <span class="progressGraphic" style="width: {$goal.percentComplete}%; background-color: rgb({xen:helper progressrgb, $goal.percentComplete});"></span>
 	            </div>
 	            <xen:if is="{$xenOptions.acceptingDonations}">
-	                <a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
+	            	<div class="sideDonateButton">
+	                	<a href="{xen:link goals/donate, $goal}" class="OverlayTrigger callToAction"><span>{xen:phrase donate}</span></a>
+	                </div>
 	            <xen:else />
 	                <div class="donationsOff">
 	                    <h3 class="description">{xen:phrase donations_arent_currently_being_accepted}</h3>

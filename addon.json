@@ -1,7 +1,7 @@
 {
         "id": "robboDonationSidebar",
         "name": "Donation Manager Sidebar",
-        "version": "1.0 RC 1",
+        "version": "1.0.0",
         "url": "https://github.com/robclancy/xf-donation-manager-sidebar",
 
         "vendor": "robbo",

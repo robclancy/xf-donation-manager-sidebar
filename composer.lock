@@ -159,12 +159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/raveren/kint.git",
-                "reference": "ada810111ced4e3a926b4040da9b86442e43b613"
+                "reference": "24a15aa6e666aa9492f4bb43b48a3dbf531014ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raveren/kint/zipball/ada810111ced4e3a926b4040da9b86442e43b613",
-                "reference": "ada810111ced4e3a926b4040da9b86442e43b613",
+                "url": "https://api.github.com/repos/raveren/kint/zipball/24a15aa6e666aa9492f4bb43b48a3dbf531014ac",
+                "reference": "24a15aa6e666aa9492f4bb43b48a3dbf531014ac",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
                 "kint",
                 "php"
             ],
-            "time": "2013-08-12 22:46:16"
+            "time": "2013-11-04 11:02:37"
         },
         {
             "name": "robclancy/xf-sync",
@@ -205,12 +205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robclancy/xf-sync.git",
-                "reference": "9ac628859f206f603979291f9208df9ebdda95c9"
+                "reference": "37134f746416d8ba9209cdb895ff80277bbf0313"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robclancy/xf-sync/zipball/9ac628859f206f603979291f9208df9ebdda95c9",
-                "reference": "9ac628859f206f603979291f9208df9ebdda95c9",
+                "url": "https://api.github.com/repos/robclancy/xf-sync/zipball/37134f746416d8ba9209cdb895ff80277bbf0313",
+                "reference": "37134f746416d8ba9209cdb895ff80277bbf0313",
                 "shasum": ""
             },
             "require": {
@@ -245,7 +245,7 @@
                 "development",
                 "xenforo"
             ],
-            "time": "2013-09-02 12:07:55"
+            "time": "2014-01-20 15:20:22"
         }
     ],
     "aliases": [
